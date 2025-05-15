@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+header{
+    text-align: center;margin: 10px;
+}
+#registrationForm{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 240px;
+    height: 25px;
+    border-radius: 7px;
+    border: 1px solid #a2e0ff;
+    color: #000;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+}
+
+.checkbox-group {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#submit,
+#reset {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.errorMessage{
+    height: 50px;
+    width: 450px;
+}
+.errorMessage li{
+    float: left;
+    margin-top: 1px;
+    color: red;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    list-style-type: none;
+}
+.status{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: green;
+    display: none;
+}
+#submit,#reset{
+    float: none;
+    width: 100px;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#showPassword{
+    float: none;
+    display: block;
+}
