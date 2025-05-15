@@ -74,22 +74,26 @@ function matchPasswords(){
 }
 
 
-$(document).ready(function(){
-    $('#submit').click(function(){
-    uname = $('#userName').val();
-    email = $('#email').val();
-    pnumber = $('#phoneNumber').val();
-    pswd = $('#password').val();
-    cnfpswd = $('#confirmPassword').val();
-    if (validateForm()){
-        $('.status').css('display','block');
-         $('#msg').css('display', 'none');
-    }
-    else{
+$(document).ready(function () {
+    $('#registrationForm').on('submit', function (event) {
+        event.preventDefault(); 
 
-    }
-})
-})
+        uname = $('#userName').val();
+        email = $('#email').val();
+        pnumber = $('#phoneNumber').val();
+        pswd = $('#password').val();
+        cnfpswd = $('#confirmPassword').val();
+
+        if (validateForm()) {
+            $('.status').css('display', 'block');
+            $('#msg').css('display', 'none');
+            this.reset(); 
+        } else {
+            $('.status').css('display', 'none');
+        }
+    });
+});
+
 
 $('#showPassword').change(function () {
     if ($(this).is(':checked')) {
