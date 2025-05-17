@@ -53,7 +53,7 @@ function validateEmail() {
 
 function validatePhoneNumber() {
     const phone = document.getElementById("phoneNumber").value.trim();
-    const regex = /^[6-9]\d{9}$/;
+    const regex = /^[0-9]\d{9}$/;
     if (!regex.test(phone)) {
         return false;
     }
