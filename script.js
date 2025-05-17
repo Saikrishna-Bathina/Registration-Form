@@ -11,7 +11,7 @@ function validateForm() {
         message = "❌ Please enter a valid email address.";
         isValid = false;
     } else if (!validatePhoneNumber()) {
-        message = "❌ Please enter a valid 10-digit phone number.";
+        message = "❌ Phone number is not valid";
         isValid = false;
     } else if (!matchPasswords()) {
         message = "❌ Passwords don't match.";
@@ -102,3 +102,11 @@ $('#showPassword').change(function () {
         $('#password, #confirmPassword').attr('type', 'password');
     }
 });
+
+
+ const phoneInput = document.getElementById('phoneNumber');
+
+  phoneInput.addEventListener('input', () => {
+    let cleaned = phoneInput.value.toString().replace(/\D/g, '').slice(0, 10);
+    phoneInput.value = cleaned;
+  });
