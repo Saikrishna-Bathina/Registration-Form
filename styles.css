@@ -36,7 +36,8 @@ header{
 }
 
 .form-group input[type="text"],
-.form-group input[type="password"] {
+.form-group input[type="password"], 
+.form-group input[type="number"]{
     width: 240px;
     height: 25px;
     border-radius: 7px;
